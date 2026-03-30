@@ -1520,7 +1520,7 @@ function InfluenceSection() {
     { title: "Collaboration Word Buffet", thumbnail: "/images/video2.jpg", link: "https://www.instagram.com/reel/DPO7wkrCtXq/" },
     { title: "Collaboration Temu", thumbnail: "/images/video3.jpg", link: "https://www.instagram.com/wejden_daoud/reel/DQJ_JOfit5s/" },
     { title: "Collaboration Noodles", thumbnail: "/images/video4.jpg", link: "https://www.instagram.com/reel/DDSLu_AIe4q/" },
-    { title: "Collaboration Champ", thumbnail: "/images/video5.jpg", link: " https://www.instagram.com/wejden_daoud/reel/DVy8-rEjY9I/" },
+    { title: "Collaboration Champ", thumbnail: "/images/video5.jpg", link: "https://www.instagram.com/wejden_daoud/reel/DVy8-rEjY9I/" },
   ];
 
   return (
@@ -1671,6 +1671,23 @@ function InfluenceSection() {
               </div>
             ))}
           </div>
+
+          {/* NEW: bridging text to connect sectors with videos */}
+          <p
+            className="reveal reveal-delay-2"
+            style={{
+              marginTop: "1.5rem",
+              fontFamily: "var(--font-body)",
+              fontSize: "0.75rem",
+              color: "var(--cream-muted)",
+              fontStyle: "italic",
+              textAlign: "center",
+              borderTop: "1px solid var(--border-light)",
+              paddingTop: "1.5rem",
+            }}
+          >
+            Ces secteurs illustrent la diversité des collaborations présentées ci‑contre.
+          </p>
         </div>
 
         {/* Actions side */}
