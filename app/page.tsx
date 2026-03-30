@@ -856,58 +856,29 @@ function CaseStudy1() {
               </p>
             </div>
 
-            {/* Impact stats */}
-            <div
-              className="reveal reveal-delay-3"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "1px",
-                background: "var(--border-light)",
-                marginTop: "2rem",
-              }}
-            >
-              {[
-                { label: "Budget dédié", value: "Zéro" },
-                { label: "Outils payants", value: "Aucun" },
-                { label: "Approche", value: "Autonome" },
-                { label: "Mesurable", value: "Résultat" },
-              ].map(({ label, value }) => (
-                <div
-                  key={label}
-                  style={{
-                    background: "var(--bg)",
-                    padding: "1.4rem",
-                  }}
-                >
-                  <p
-                    style={{
-                      fontFamily: "var(--font-display)",
-                      fontSize: "1.6rem",
-                      color: "var(--gold)",
-                      fontWeight: 300,
-                    }}
-                  >
-                    {value}
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: "0.62rem",
-                      color: "var(--cream-muted)",
-                      letterSpacing: "0.14em",
-                      textTransform: "uppercase",
-                      marginTop: "0.3rem",
-                    }}
-                  >
-                    {label}
-                  </p>
-                </div>
-              ))}
+            {/* New paragraph instead of stats grid */}
+            <div className="reveal reveal-delay-3">
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.9rem",
+                  color: "var(--cream-muted)",
+                  lineHeight: 1.8,
+                  fontWeight: 300,
+                  borderLeft: "1px solid var(--border-light)",
+                  paddingLeft: "1.5rem",
+                }}
+              >
+                Avec un <strong style={{ color: "var(--gold)" }}>budget dédié nul</strong> et 
+                <strong style={{ color: "var(--gold)" }}> aucun outil payant</strong>, j&apos;ai mené une approche 
+                <strong style={{ color: "var(--gold)" }}> 100% autonome</strong> qui a abouti à des 
+                <strong style={{ color: "var(--gold)" }}> résultats concrets et mesurables</strong> : 
+                optimisation du tunnel d&apos;acquisition, mise en place d&apos;un CRM, et automatisation des actions marketing.
+              </p>
             </div>
           </div>
 
-          {/* Right */}
+          {/* Right side (unchanged) */}
           <div className="reveal reveal-delay-2">
             <div
               style={{
@@ -1545,10 +1516,11 @@ function CaseStudy2() {
 /* ─────────────────────────── INFLUENCE SECTION (MODIFIED) ─────────────────────────── */
 function InfluenceSection() {
   const videos = [
-    { title: "Collaboration marque auto", thumbnail: "/images/video1.jpg", link: "https://www.instagram.com/reel/DRm_sDRDfBn/" },
+    { title: "Collaboration BYD", thumbnail: "/images/video1.jpg", link: "https://www.instagram.com/reel/DRm_sDRDfBn/" },
     { title: "Collaboration Word Buffet", thumbnail: "/images/video2.jpg", link: "https://www.instagram.com/reel/DPO7wkrCtXq/" },
-    { title: "Collaboration Temu", thumbnail: "/images/video3.jpg", link: "https://www.instagram.com/reel/DOobVs5DeJ_/" },
-    { title: "Collaboration noodles", thumbnail: "/images/video4.jpg", link: "https://www.instagram.com/reel/DDSLu_AIe4q/" },
+    { title: "Collaboration Temu", thumbnail: "/images/video3.jpg", link: "https://www.instagram.com/wejden_daoud/reel/DQJ_JOfit5s/" },
+    { title: "Collaboration Noodles", thumbnail: "/images/video4.jpg", link: "https://www.instagram.com/reel/DDSLu_AIe4q/" },
+    { title: "Collaboration Champ", thumbnail: "/images/video5.jpg", link: " https://www.instagram.com/wejden_daoud/reel/DVy8-rEjY9I/" },
   ];
 
   return (
