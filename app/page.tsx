@@ -1237,6 +1237,7 @@ function ContentStrategySection() {
 }
 
 /* ─────────────────────────── CASE 2 — GYM ─────────────────────────── */
+/* ─────────────────────────── CASE 2 — GYM ─────────────────────────── */
 function CaseStudy2() {
   return (
     <section
@@ -1447,6 +1448,7 @@ function CaseStudy2() {
               style={{
                 border: "1px solid var(--border-light)",
                 padding: "2.5rem",
+                marginBottom: "1.5rem",
               }}
             >
               <p
@@ -1506,9 +1508,75 @@ function CaseStudy2() {
                 </div>
               ))}
             </div>
+
+            {/* NEW: Instagram link block */}
+            <div
+              style={{
+                border: "1px solid var(--border)",
+                padding: "1.5rem 2rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: "1rem",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontSize: "0.78rem",
+                    color: "var(--cream-muted)",
+                    marginBottom: "0.3rem",
+                  }}
+                >
+                  Voir le compte Instagram
+                </p>
+                <p
+                  style={{
+                    fontFamily: "var(--font-display)",
+                    fontSize: "1rem",
+                    color: "var(--cream)",
+                  }}
+                >
+                  @mimers_gym
+                </p>
+              </div>
+              <a
+                href="https://www.instagram.com/mimers_gym/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  padding: "0.6rem 1.4rem",
+                  background: "var(--gold)",
+                  color: "var(--bg)",
+                  fontSize: "0.68rem",
+                  letterSpacing: "0.15em",
+                  textTransform: "uppercase",
+                  fontFamily: "var(--font-body)",
+                  fontWeight: 500,
+                  whiteSpace: "nowrap",
+                  borderRadius: "2px",
+                  transition: "opacity 0.3s",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.opacity = "0.85")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.opacity = "1")
+                }
+              >
+                Voir →
+              </a>
+            </div>
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .case-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+        }
+      `}</style>
     </section>
   );
 }
@@ -1634,10 +1702,10 @@ function InfluenceSection() {
             }}
           >
             {[
-              { v: "Automobile", l: "Secteur" },
-              { v: "Cosmétique", l: "Secteur" },
-              { v: "Restauration", l: "Secteur" },
-              { v: "Multi-marques", l: "Collaborations" },
+              { l: "Automobile", v: "Secteur" },
+              { l: "Cosmétique", v: "Secteur" },
+              { l: "Restauration", v: "Secteur" },
+              { l: "Multi-marques", v: "Collaborations" },
             ].map(({ v, l }) => (
               <div
                 key={v}
