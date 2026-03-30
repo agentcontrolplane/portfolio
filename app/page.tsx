@@ -1629,7 +1629,7 @@ function InfluenceSection() {
                 marginBottom: "0.3rem",
               }}
             >
-              96K+
+              93K+
             </p>
             <p
               style={{
