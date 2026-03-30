@@ -1588,7 +1588,7 @@ function InfluenceSection() {
     { title: "Collaboration Word Buffet", thumbnail: "/images/video2.jpg", link: "https://www.instagram.com/reel/DPO7wkrCtXq/" },
     { title: "Collaboration Temu", thumbnail: "/images/video3.jpg", link: "https://www.instagram.com/wejden_daoud/reel/DQJ_JOfit5s/" },
     { title: "Collaboration Noodles", thumbnail: "/images/video4.jpg", link: "https://www.instagram.com/reel/DDSLu_AIe4q/" },
-    { title: "Collaboration Champ", thumbnail: "/images/video5.jpg", link: "https://www.instagram.com/wejden_daoud/reel/DVy8-rEjY9I/" },
+    { title: "Collaboration Champo", thumbnail: "/images/video5.jpg", link: "https://www.instagram.com/wejden_daoud/reel/DVy8-rEjY9I/" },
   ];
 
   return (
