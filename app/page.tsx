@@ -1545,10 +1545,10 @@ function CaseStudy2() {
 /* ─────────────────────────── INFLUENCE SECTION (MODIFIED) ─────────────────────────── */
 function InfluenceSection() {
   const videos = [
-    { title: "Collaboration marque auto", thumbnail: "images/video1.jpg", link: "https://www.instagram.com/reel/DRm_sDRDfBn/" },
-    { title: "Collaboration Word Buffet", thumbnail: "images/video2.jpg", link: "https://www.instagram.com/reel/DPO7wkrCtXq/" },
-    { title: "Collaboration Temu", thumbnail: "images/video3.jpg", link: "https://www.instagram.com/reel/DOobVs5DeJ_/" },
-    { title: "Collaboration noodles", thumbnail: "images/video4.jpg", link: "https://www.instagram.com/reel/DDSLu_AIe4q/" },
+    { title: "Collaboration marque auto", thumbnail: "/images/video1.jpg", link: "https://www.instagram.com/reel/DRm_sDRDfBn/" },
+    { title: "Collaboration Word Buffet", thumbnail: "/images/video2.jpg", link: "https://www.instagram.com/reel/DPO7wkrCtXq/" },
+    { title: "Collaboration Temu", thumbnail: "/images/video3.jpg", link: "https://www.instagram.com/reel/DOobVs5DeJ_/" },
+    { title: "Collaboration noodles", thumbnail: "/images/video4.jpg", link: "https://www.instagram.com/reel/DDSLu_AIe4q/" },
   ];
 
   return (
@@ -1790,7 +1790,7 @@ function InfluenceSection() {
             </div>
           ))}
 
-          {/* NEW: Video showcase */}
+          {/* Video showcase */}
           <div style={{ marginTop: "3rem" }}>
             <p
               style={{
@@ -1835,33 +1835,17 @@ function InfluenceSection() {
                   <div
                     style={{
                       aspectRatio: "16/9",
-                      background: "#2a251f",
                       position: "relative",
                       overflow: "hidden",
+                      background: "#2a251f",
                     }}
                   >
-                    {/* Fallback if image not available */}
-                    <div
-                      style={{
-                        position: "absolute",
-                        inset: 0,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontFamily: "var(--font-mono)",
-                        fontSize: "0.7rem",
-                        color: "var(--cream-muted)",
-                      }}
-                    >
-                      🎬
-                    </div>
-                    {/* Uncomment when you have actual thumbnails */}
-                    { <Image
+                    <Image
                       src={video.thumbnail}
                       alt={video.title}
                       fill
                       style={{ objectFit: "cover" }}
-                    /> }
+                    />
                   </div>
                   <div style={{ padding: "0.75rem" }}>
                     <p
