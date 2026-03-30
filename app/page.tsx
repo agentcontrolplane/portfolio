@@ -767,7 +767,7 @@ function CaseStudy1() {
               textTransform: "uppercase",
             }}
           >
-            BtoB · Agricole
+            BtoB/BtoC · Agricole
           </span>
         </div>
 
@@ -823,7 +823,7 @@ function CaseStudy1() {
                   lineHeight: 1.8,
                 }}
               >
-                Entreprise agricole BtoB avec une offre complexe, une faible
+                Entreprise agricole BtoB/BtoC avec une offre complexe, une faible
                 visibilité digitale et une expérience client peu structurée.
               </p>
             </div>
