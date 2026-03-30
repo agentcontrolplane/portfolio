@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 /* ─────────────────────────── REVEAL HOOK ─────────────────────────── */
 function useReveal() {
@@ -62,7 +63,6 @@ function Nav() {
           : "none",
       }}
     >
-      {/* Logo */}
       <a
         href="#"
         style={{
@@ -77,7 +77,6 @@ function Nav() {
         W·D
       </a>
 
-      {/* Desktop links */}
       <ul
         style={{
           display: "flex",
@@ -113,9 +112,8 @@ function Nav() {
         ))}
       </ul>
 
-      {/* CTA */}
       <a
-        href="mailto:wejden.daoud@email.com"
+        href="mailto:wejdendaoud6@gmail.com"
         style={{
           padding: "0.5rem 1.4rem",
           border: "1px solid var(--gold)",
@@ -219,8 +217,34 @@ function Hero() {
             textTransform: "uppercase",
           }}
         >
-          Portfolio 2025
+          Portfolio 2026
         </span>
+      </div>
+
+      {/* Profile image - NEW */}
+      <div
+        style={{
+          position: "absolute",
+          top: "12rem",
+          right: "3rem",
+          width: "120px",
+          height: "120px",
+          borderRadius: "50%",
+          overflow: "hidden",
+          border: "2px solid var(--gold)",
+          boxShadow: "0 0 20px rgba(200,151,90,0.2)",
+          animation: "fadeIn 1s ease forwards",
+          animationDelay: "0.8s",
+          opacity: 0,
+        }}
+      >
+        <Image
+          src="/images/profile-hero.jpg"  // Replace with your actual image
+          alt="Wejden Daoud"
+          width={120}
+          height={120}
+          style={{ objectFit: "cover", width: "100%", height: "100%" }}
+        />
       </div>
 
       {/* Floating role badge */}
@@ -1518,8 +1542,16 @@ function CaseStudy2() {
   );
 }
 
-/* ─────────────────────────── INFLUENCE SECTION ─────────────────────────── */
+/* ─────────────────────────── INFLUENCE SECTION (MODIFIED) ─────────────────────────── */
 function InfluenceSection() {
+  // Example video data (replace with actual videos from Instagram)
+  const videos = [
+    { title: "Collaboration marque auto", thumbnail: "/images/video1.jpg", link: "https://www.instagram.com/reel/DRm_sDRDfBn/" },
+    { title: "Collaboration Word Buffet", thumbnail: "/images/video2.jpg", link: "https://www.instagram.com/reel/DPO7wkrCtXq/" },
+    { title: "Collaboration Temu", thumbnail: "/images/video3.jpg", link: "https://www.instagram.com/reel/DOobVs5DeJ_/" },
+    { title: "Collaboration noodles", thumbnail: "/images/video4.jpg", link: "https://www.instagram.com/reel/DDSLu_AIe4q/" },
+  ];
+
   return (
     <section
       id="influence"
@@ -1534,7 +1566,7 @@ function InfluenceSection() {
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: "6rem",
-          alignItems: "center",
+          alignItems: "start",
         }}
         className="strategy-grid"
       >
@@ -1758,6 +1790,123 @@ function InfluenceSection() {
               </div>
             </div>
           ))}
+
+          {/* NEW: Video showcase */}
+          <div style={{ marginTop: "3rem" }}>
+            <p
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.65rem",
+                letterSpacing: "0.22em",
+                color: "var(--gold)",
+                textTransform: "uppercase",
+                marginBottom: "1.5rem",
+              }}
+            >
+              Quelques créations vidéo
+            </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
+                gap: "1rem",
+              }}
+            >
+              {videos.map((video, idx) => (
+                <a
+                  key={idx}
+                  href={video.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "block",
+                    background: "var(--surface)",
+                    borderRadius: "4px",
+                    overflow: "hidden",
+                    transition: "transform 0.3s ease",
+                    textDecoration: "none",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.transform = "scale(1.02)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.transform = "scale(1)")
+                  }
+                >
+                  <div
+                    style={{
+                      aspectRatio: "16/9",
+                      background: "#2a251f",
+                      position: "relative",
+                      overflow: "hidden",
+                    }}
+                  >
+                    {/* Fallback if image not available */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        inset: 0,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "0.7rem",
+                        color: "var(--cream-muted)",
+                      }}
+                    >
+                      🎬
+                    </div>
+                    {/* Uncomment when you have actual thumbnails */}
+                    {/* <Image
+                      src={video.thumbnail}
+                      alt={video.title}
+                      fill
+                      style={{ objectFit: "cover" }}
+                    /> */}
+                  </div>
+                  <div style={{ padding: "0.75rem" }}>
+                    <p
+                      style={{
+                        fontFamily: "var(--font-body)",
+                        fontSize: "0.7rem",
+                        color: "var(--cream)",
+                        fontWeight: 400,
+                        marginBottom: "0.25rem",
+                      }}
+                    >
+                      {video.title}
+                    </p>
+                    <p
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "0.6rem",
+                        color: "var(--gold)",
+                      }}
+                    >
+                      Voir sur Instagram ↗
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+            <div style={{ marginTop: "1.5rem", textAlign: "center" }}>
+              <a
+                href="https://www.instagram.com/wejden_daoud/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "0.7rem",
+                  letterSpacing: "0.12em",
+                  color: "var(--gold)",
+                  borderBottom: "1px solid var(--gold)",
+                  paddingBottom: "0.2rem",
+                }}
+              >
+                Voir plus sur mon Instagram →
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1930,7 +2079,7 @@ function ValueSection() {
   );
 }
 
-/* ─────────────────────────── CTA / CONTACT ─────────────────────────── */
+/* ─────────────────────────── CONTACT SECTION (UPDATED) ─────────────────────────── */
 function ContactSection() {
   return (
     <section
@@ -1986,8 +2135,130 @@ function ContactSection() {
         }}
       >
         Disponible pour des missions de marketing & communication — en
-        freelance ou en collaboration.
+        freelance, CDI, CDD ou en collaboration.
       </p>
+
+      {/* Contact info cards */}
+      <div
+        className="reveal reveal-delay-3"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "2rem",
+          flexWrap: "wrap",
+          marginBottom: "3rem",
+        }}
+      >
+        <div
+          style={{
+            background: "rgba(26, 23, 20, 0.7)",
+            backdropFilter: "blur(10px)",
+            border: "1px solid var(--border-light)",
+            padding: "1.2rem 1.8rem",
+            borderRadius: "2px",
+            minWidth: "200px",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: "0.6rem",
+              letterSpacing: "0.12em",
+              color: "var(--gold)",
+              marginBottom: "0.5rem",
+            }}
+          >
+            Email
+          </p>
+          <a
+            href="mailto:wejdendaoud6@gmail.com"
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "0.85rem",
+              color: "var(--cream)",
+              transition: "color 0.3s",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "var(--gold)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "var(--cream)")}
+          >
+            wejdendaoud6@gmail.com
+          </a>
+        </div>
+
+        <div
+          style={{
+            background: "rgba(26, 23, 20, 0.7)",
+            backdropFilter: "blur(10px)",
+            border: "1px solid var(--border-light)",
+            padding: "1.2rem 1.8rem",
+            borderRadius: "2px",
+            minWidth: "200px",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: "0.6rem",
+              letterSpacing: "0.12em",
+              color: "var(--gold)",
+              marginBottom: "0.5rem",
+            }}
+          >
+            Téléphone
+          </p>
+          <a
+            href="tel:+33745224248"
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "0.85rem",
+              color: "var(--cream)",
+              transition: "color 0.3s",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "var(--gold)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "var(--cream)")}
+          >
+            07 45 22 42 48
+          </a>
+        </div>
+
+        <div
+          style={{
+            background: "rgba(26, 23, 20, 0.7)",
+            backdropFilter: "blur(10px)",
+            border: "1px solid var(--border-light)",
+            padding: "1.2rem 1.8rem",
+            borderRadius: "2px",
+            minWidth: "200px",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: "0.6rem",
+              letterSpacing: "0.12em",
+              color: "var(--gold)",
+              marginBottom: "0.5rem",
+            }}
+          >
+            LinkedIn
+          </p>
+          <a
+            href="https://www.linkedin.com/in/wejden-daoud-88b23a273/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "0.85rem",
+              color: "var(--cream)",
+              transition: "color 0.3s",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "var(--gold)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "var(--cream)")}
+          >
+            wejden-daoud
+          </a>
+        </div>
+      </div>
 
       <div
         className="reveal reveal-delay-3"
@@ -1999,7 +2270,7 @@ function ContactSection() {
         }}
       >
         <a
-          href="mailto:wejden.daoud@email.com"
+          href="mailto:wejdendaoud6@gmail.com"
           style={{
             padding: "1rem 2.5rem",
             background: "var(--gold)",
@@ -2018,7 +2289,7 @@ function ContactSection() {
           M&apos;écrire →
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/wejden-daoud-88b23a273/"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -2044,6 +2315,35 @@ function ContactSection() {
         >
           LinkedIn
         </a>
+      </div>
+
+      {/* Small personal photo */}
+      <div
+        className="reveal reveal-delay-4"
+        style={{
+          marginTop: "4rem",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <div
+          style={{
+            width: "80px",
+            height: "80px",
+            borderRadius: "50%",
+            overflow: "hidden",
+            border: "1px solid var(--gold)",
+            opacity: 0.6,
+          }}
+        >
+          <Image
+            src="/images/profile-small.jpg" // Replace with your image
+            alt="Wejden Daoud"
+            width={80}
+            height={80}
+            style={{ objectFit: "cover", width: "100%", height: "100%" }}
+          />
+        </div>
       </div>
     </section>
   );
@@ -2082,7 +2382,7 @@ function Footer() {
           letterSpacing: "0.12em",
         }}
       >
-        © 2025 · Chargée Marketing & Communication
+        © 2026 · Chargée Marketing & Communication
       </span>
       <a
         href="https://silosdutouch.com/"
