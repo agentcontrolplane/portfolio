@@ -1582,6 +1582,7 @@ function CaseStudy2() {
 }
 
 /* ─────────────────────────── INFLUENCE SECTION (MODIFIED) ─────────────────────────── */
+/* ─────────────────────────── INFLUENCE SECTION (FULL) ─────────────────────────── */
 function InfluenceSection() {
   const videos = [
     { title: "Collaboration BYD", thumbnail: "/images/video1.jpg", link: "https://www.instagram.com/reel/DRm_sDRDfBn/" },
@@ -1693,54 +1694,135 @@ function InfluenceSection() {
             </p>
           </div>
 
+          {/* Sectors & collaborations - NEW DESIGN */}
           <div
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
               gap: "1px",
               background: "var(--border-light)",
+              marginTop: "1rem",
             }}
           >
-            {[
-              { l: "Automobile", v: "Secteur" },
-              { l: "Cosmétique", v: "Secteur" },
-              { l: "Restauration", v: "Secteur" },
-              { l: "Multi-marques", v: "Collaborations" },
-            ].map(({ v, l }) => (
-              <div
-                key={v}
+            <div
+              style={{
+                background: "var(--surface)",
+                padding: "1.8rem 1rem",
+                textAlign: "center",
+                transition: "background 0.3s",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.background = "rgba(200, 151, 90, 0.05)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.background = "var(--surface)")
+              }
+            >
+              <p
                 style={{
-                  background: "var(--surface)",
-                  padding: "1.4rem",
+                  fontFamily: "var(--font-display)",
+                  fontSize: "1.3rem",
+                  color: "var(--cream)",
+                  fontWeight: 400,
+                  marginBottom: "0.2rem",
                 }}
               >
-                <p
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: "1.1rem",
-                    color: "var(--cream)",
-                    fontWeight: 400,
-                    marginBottom: "0.2rem",
-                  }}
-                >
-                  {v}
-                </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "0.6rem",
-                    color: "var(--cream-muted)",
-                    letterSpacing: "0.14em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  {l}
-                </p>
-              </div>
-            ))}
+                Automobile
+              </p>
+            </div>
+            <div
+              style={{
+                background: "var(--surface)",
+                padding: "1.8rem 1rem",
+                textAlign: "center",
+                transition: "background 0.3s",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.background = "rgba(200, 151, 90, 0.05)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.background = "var(--surface)")
+              }
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "1.3rem",
+                  color: "var(--cream)",
+                  fontWeight: 400,
+                  marginBottom: "0.2rem",
+                }}
+              >
+                Cosmétique
+              </p>
+            </div>
+            <div
+              style={{
+                background: "var(--surface)",
+                padding: "1.8rem 1rem",
+                textAlign: "center",
+                transition: "background 0.3s",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.background = "rgba(200, 151, 90, 0.05)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.background = "var(--surface)")
+              }
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "1.3rem",
+                  color: "var(--cream)",
+                  fontWeight: 400,
+                  marginBottom: "0.2rem",
+                }}
+              >
+                Restauration
+              </p>
+            </div>
+            <div
+              style={{
+                background: "var(--surface)",
+                padding: "1.8rem 1rem",
+                textAlign: "center",
+                transition: "background 0.3s",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.background = "rgba(200, 151, 90, 0.05)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.background = "var(--surface)")
+              }
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "1.3rem",
+                  color: "var(--cream)",
+                  fontWeight: 400,
+                  marginBottom: "0.2rem",
+                }}
+              >
+                Multi‑marques
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "0.55rem",
+                  color: "var(--cream-muted)",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  marginTop: "0.2rem",
+                }}
+              >
+                Collaborations
+              </p>
+            </div>
           </div>
 
-          {/* NEW: bridging text to connect sectors with videos */}
+          {/* Bridging text to connect sectors with videos */}
           <p
             className="reveal reveal-delay-2"
             style={{
@@ -1952,7 +2034,6 @@ function InfluenceSection() {
     </section>
   );
 }
-
 /* ─────────────────────────── VALEUR AJOUTÉE ─────────────────────────── */
 function ValueSection() {
   return (
