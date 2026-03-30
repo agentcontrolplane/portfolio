@@ -871,7 +871,7 @@ function CaseStudy1() {
                 { label: "Budget dédié", value: "Zéro" },
                 { label: "Outils payants", value: "Aucun" },
                 { label: "Approche", value: "Autonome" },
-                { label: "Résultat", value: "Mesurable" },
+                { label: "Mesurable", value: "Résultat" },
               ].map(({ label, value }) => (
                 <div
                   key={label}
@@ -1544,12 +1544,11 @@ function CaseStudy2() {
 
 /* ─────────────────────────── INFLUENCE SECTION (MODIFIED) ─────────────────────────── */
 function InfluenceSection() {
-  // Example video data (replace with actual videos from Instagram)
   const videos = [
-    { title: "Collaboration marque auto", thumbnail: "/images/video1.jpg", link: "https://www.instagram.com/reel/DRm_sDRDfBn/" },
-    { title: "Collaboration Word Buffet", thumbnail: "/images/video2.jpg", link: "https://www.instagram.com/reel/DPO7wkrCtXq/" },
-    { title: "Collaboration Temu", thumbnail: "/images/video3.jpg", link: "https://www.instagram.com/reel/DOobVs5DeJ_/" },
-    { title: "Collaboration noodles", thumbnail: "/images/video4.jpg", link: "https://www.instagram.com/reel/DDSLu_AIe4q/" },
+    { title: "Collaboration marque auto", thumbnail: "images/video1.jpg", link: "https://www.instagram.com/reel/DRm_sDRDfBn/" },
+    { title: "Collaboration Word Buffet", thumbnail: "images/video2.jpg", link: "https://www.instagram.com/reel/DPO7wkrCtXq/" },
+    { title: "Collaboration Temu", thumbnail: "images/video3.jpg", link: "https://www.instagram.com/reel/DOobVs5DeJ_/" },
+    { title: "Collaboration noodles", thumbnail: "images/video4.jpg", link: "https://www.instagram.com/reel/DDSLu_AIe4q/" },
   ];
 
   return (
@@ -1857,12 +1856,12 @@ function InfluenceSection() {
                       🎬
                     </div>
                     {/* Uncomment when you have actual thumbnails */}
-                    {/* <Image
+                    { <Image
                       src={video.thumbnail}
                       alt={video.title}
                       fill
                       style={{ objectFit: "cover" }}
-                    /> */}
+                    /> }
                   </div>
                   <div style={{ padding: "0.75rem" }}>
                     <p
